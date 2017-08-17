@@ -547,7 +547,7 @@ var get_vimeo_videoID = function( url ) {
 				if( !vimeo_player.isMute )
 					jQuery( vimeo_player ).v_unmute();
 				else
-					jQuery( vimeo_player ).v_mute();
+					jQuery( vimeo_player ).v_unmute();
 			} else {
 
 				vimeo_player.opt.vol = val;
@@ -576,7 +576,7 @@ var get_vimeo_videoID = function( url ) {
 			if( vimeo_player.isMute )
 				return;
 			vimeo_player.isMute = true;
-			vimeo_player.player.setVolume( 0 );
+			vimeo_player.player.setVolume( 30 );
 			if( vimeo_player.volumeBar && vimeo_player.volumeBar.length && vimeo_player.volumeBar.width() > 10 ) {
 				vimeo_player.volumeBar.updateSliderVal( 0 );
 			}
